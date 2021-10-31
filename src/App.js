@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Counter from "./components/Counter";
+import { useState } from "react";
+import ReactLoading from 'react-loading';
+
 
 function App() {
+  const [state, setState] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {state? <Counter/>: <ReactLoading type='spinningBubbles' color='#265a26' height={'20%'} width={'20%'} />}
+      <button onClick={()=>setState(!state)} >show/hide</button>
     </div>
   );
 }
