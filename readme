@@ -1,0 +1,5 @@
+react life cycle methods
+
+1. Mounting  - called when the component is mounted
+2. Updating - called when the component is updated
+3. Unmounting  - called when the component is removed
